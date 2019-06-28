@@ -5,7 +5,7 @@ document.getElementById("codificar").addEventListener('click', () => {
     let texto = document.getElementById("texto").value
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f\d\,\?\!\:\;\@\$\%\&\*\.]/g, "")
+        .replace(/[\u0300-\u036f\d\,\?\!\:\;\@\$\%\&\*\.\´\^\~]/g, "")
     let resultado = passo1(chave, texto, 1)
     document.getElementById("resultado").innerHTML = resultado;
 });
